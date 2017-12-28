@@ -17,6 +17,6 @@
   </target>
   <target name="package" depends="compile">
     <echo message="deleting the tmp files..."/>
-    <jar basedir="lib/HelloWorld.clas" destdir="bin"/>
+    <jar basedir="lib/HelloWorld.class" destdir="bin"/>
   </target>
 </project>
