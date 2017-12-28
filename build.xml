@@ -1,4 +1,4 @@
-<project name="HelloTest" basedir="." default="pacakage">
+<project name="HelloWorld" basedir="." default="pacakage">
 <property name="src" value="src"/>
 <target name="clean">
   <echo message="deleting the tmp files..."/>
