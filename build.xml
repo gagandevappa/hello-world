@@ -1,24 +1,24 @@
 <project name="HelloTest" basedir="." default="pacakage">
 <property name="src" value="src"/>
-  <target name="clean">
-    <echo message="deleting the tmp files..."/>
-    <delete file="lib/HelloWorld.class"/>
-    <delete file="bin/HelloWorld.jar"/>
-    <delete dir="lib"/>
-    <delete dir="bin"/>
-  </target>
-  <target name="create" depends="clean">
-    <echo message="creating the required files and folder structure..."/>
-    <mkdir dir="bin"/>
-    <mkdir dir="src"/>
-    <mkdir dir="lib"/>
-  </target>
-  <target name="compile" depends="create">
-    <echo message="compiling the files to create an class file"/>
-    <javac destdir="lib" srcdir="src"/>
-  </target>
-  <target name="package" depends="compile">
-    <echo message="deleting the tmp files..."/>
-    <jar destdir="bin/HelloWorld.jar" basedir="lib"/>
-  </target>
+<target name="clean">
+  <echo message="deleting the tmp files..."/>
+  <delete file="lib/HelloWorld.class"/>
+  <delete file="bin/HelloWorld.jar"/>
+  <delete dir="lib"/>
+  <delete dir="bin"/>
+</target>
+<target name="create" depends="clean">
+  <echo message="creating the required files and folder structure..."/>
+  <mkdir dir="bin"/>
+  <mkdir dir="src"/>
+  <mkdir dir="lib"/>
+</target>
+<target name="compile" depends="create">
+  <echo message="compiling the files to create an class file"/>
+  <javac includeantruntime="false" destdir="lib" srcdir="src"/>
+</target>
+<target name="package" depends="compile">
+  <echo message="deleting the tmp files..."/>
+  <jar destfile="bin/HelloWorld.jar" basedir="lib"/>
+</target>
 </project>
