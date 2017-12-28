@@ -7,9 +7,9 @@
   </target>
   <target name="creat" depends="clean">
     <echo message="creating the required files and folder structure..."/>
-    <mkdir ="bin"/>
-    <mkdir ="src"/>
-    <mkdir ="lib"/>
+    <mkdir dir="bin"/>
+    <mkdir dir="src"/>
+    <mkdir dir="lib"/>
   </target>
   <target name="compile" depends="create">
     <echo message="compiling the files to create an class file"/>
