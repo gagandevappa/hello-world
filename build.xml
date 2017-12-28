@@ -5,7 +5,7 @@
     <delete dir="lib"/>
     <delete dir=<"bin"/>
   </target>
-  <target name="creat" depends="clean">
+  <target name="create" depends="clean">
     <echo message="creating the required files and folder structure..."/>
     <mkdir dir="bin"/>
     <mkdir dir="src"/>
