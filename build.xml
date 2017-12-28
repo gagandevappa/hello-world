@@ -15,7 +15,7 @@
   </target>
   <target name="compile" depends="create">
     <echo message="compiling the files to create an class file"/>
-    <javac destdir="lib" srcdir="src">
+    <javac destdir="lib" srcdir="src"/>
   </target>
   <target name="package" depends="compile">
     <echo message="deleting the tmp files..."/>
