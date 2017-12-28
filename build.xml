@@ -1,0 +1,22 @@
+<project name="HelloTest" basedir="." default="pacakage">
+<property name="src" value="src"/>
+  <target name="clean">
+    <echo message="deleting the tmp files..."/>
+    <delete dir="lib"/>
+    <delete dir=<"bin"/>
+  </target>
+  <target name="creat" depends="clean">
+    <echo message="creating the required files and folder structure..."/>
+    <mkdir ="bin"/>
+    <mkdir ="src"/>
+    <mkdir ="lib"/>
+  </target>
+  <target name="compile" depends="create">
+    <echo message="compiling the files to create an class file"/>
+    <javac destdir="lib" srcdir="src">
+  </target>
+  <target name="package" depends="compile">
+    <echo message="deleting the tmp files..."/>
+    <jar basedir="lib/HelloWorld.clas" destdir="bin"/>
+  </target>
+</project>
