@@ -2,6 +2,8 @@
 <property name="src" value="src"/>
   <target name="clean">
     <echo message="deleting the tmp files..."/>
+    <delete file="lib/HelloWorld.class">
+    <delete file="bin/HelloWorld.jar">
     <delete dir="lib"/>
     <delete dir="bin"/>
   </target>
@@ -17,6 +19,6 @@
   </target>
   <target name="package" depends="compile">
     <echo message="deleting the tmp files..."/>
-    <jar basedir="lib/HelloWorld.class" destdir="bin"/>
+    <jar destdir="bin/HelloWorld.jar" basedir="lib"/>
   </target>
 </project>
