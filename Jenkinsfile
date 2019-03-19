@@ -5,11 +5,10 @@ node('build_node_1') {
     checkout scm
   }
   stage('build') {
-    withMaven(
-        // Maven installation declared in the Jenkins "Global Tool Configuration"
-      maven: 'M3') {
+    withMaven(maven: 'M3') {
       sh 'echo "PATH = ${PATH}"'
       sh 'echo "M2_HOME = ${M2_HOME}"'
       sh 'mvn -B -DskipTests clean package'
+    }
   }
 }
