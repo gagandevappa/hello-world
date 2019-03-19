@@ -5,6 +5,8 @@ node('build_node_1') {
     checkout scm
   }
   stage('build') {
-    mvn clean package
+    steps {
+    sh 'mvn -B -DskipTests clean package'
+    }
   }
 }
