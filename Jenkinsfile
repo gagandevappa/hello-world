@@ -1,8 +1,5 @@
 #!/usr/bin/env groovy
 node('build_node_1') {
-  tools {
-    maven 'M3'
-  }
   stage('code_checkout') {
     cleanWs()
     checkout scm
