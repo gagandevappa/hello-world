@@ -5,7 +5,8 @@ node('build_node_1') {
     checkout scm
   }
   stage('build') {
-    withMaven(maven: 'M3') {
+    withMaven(maven: 'M2') {
+      def mvnHome = 'M2'
       sh 'echo "PATH = ${PATH}"'
       sh 'echo "M2_HOME = ${M2_HOME}"'
       sh 'mvn -B -DskipTests clean package'
