@@ -6,9 +6,7 @@ node('build_node_1') {
   }
   stage('build') {
     sh 'echo "PATH = ${PATH}"'
-    sh 'echo "M2_HOME = ${M2_HOME}"'
-    steps {  
-      sh 'mvn -B -DskipTests clean package'
-    }
+    sh 'echo "M2_HOME = ${M2_HOME}"'  
+    sh 'mvn clean package'
   }
 }
