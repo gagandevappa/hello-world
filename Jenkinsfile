@@ -4,4 +4,7 @@ node('build_node_1') {
     cleanWS()
     checkout scm
   }
+  stage('build') {
+    mvn clean package
+  }
 }
