@@ -6,7 +6,7 @@ node('build_node_1') {
   }
   stage('SonarQube analysis') {
     // requires SonarQube Scanner 2.8+
-    def scannerHome = tool 'SonarQube Scanner 3.3.0.1492';
+    def scannerHome = tool '/opt/sonarqube/sonar-scanner-3.3.0.1492-linux';
     withSonarQubeEnv('mysonar') {
       sh "${scannerHome}/bin/sonar-scanner"
     }
